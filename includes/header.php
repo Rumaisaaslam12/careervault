@@ -22,6 +22,9 @@
                     <h1>📚 CareerVault</h1>
                 </a>
             </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
             <?php if (is_logged_in()): ?>
             <nav class="nav-menu">
                 <ul>
