@@ -3,14 +3,5 @@
   "description": "CareerVault - Career Diary & Portfolio System",
   "type": "project",
   "license": "MIT",
-  "require": {
-    "php": "^8.0",
-    "ext-mysqli": "*"
-  },
-  "authors": [
-    {
-      "name": "Sandman",
-      "email": "sandman@example.com"
-    }
-  ]
+  "require": {}
 }
