@@ -14,3 +14,7 @@ function format_date($date) {
 
     return date('d M Y', strtotime($date));
 }
+
+function validate_email($email) {
+    return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
+}

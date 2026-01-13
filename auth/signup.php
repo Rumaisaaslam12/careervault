@@ -5,6 +5,7 @@
  */
 require_once '../config/db.php';
 require_once '../includes/session.php';
+require_once '../includes/helpers.php';
 
 // Redirect if already logged in
 if (is_logged_in()) {
