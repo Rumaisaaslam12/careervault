@@ -3,5 +3,8 @@
   "description": "CareerVault - Career Diary & Portfolio System",
   "type": "project",
   "license": "MIT",
-  "require": {}
+  "require": {
+    "php": ">=8.2",
+    "ext-mysqli": "*"
+  }
 }
