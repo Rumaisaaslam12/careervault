@@ -43,8 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         } elseif (!in_array($file['type'], $allowed_types)) {
             $error_message = "Only PDF and image files (JPG, PNG) are allowed.";
         } else {
-            // Create upload directory if not exists
-            $upload_dir = '../uploads/certificates/';
+            $env_upload = getenv('UPLOAD_DIR');
+            $upload_dir = $env_upload ? rtrim($env_upload, '/').'/' : __DIR__ . '/../uploads/certificates/';
             if (!file_exists($upload_dir)) {
                 mkdir($upload_dir, 0777, true);
             }
