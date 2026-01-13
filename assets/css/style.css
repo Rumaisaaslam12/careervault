@@ -386,24 +386,28 @@ select.form-control {
     }
 
     .nav-toggle {
-        display: none;
+        display: block;
+        align-self: center;
     }
 
     .nav-menu {
-        display: flex;
-        width: auto;
+        display: none;
+        width: 100%;
+    }
+
+    .nav-menu.open {
+        display: block;
     }
 
     .nav-menu ul {
-        flex-direction: row;
-        gap: 1rem;
-        text-align: right;
-        padding: 0;
-        overflow-x: auto;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: left;
+        padding: 0 1rem 1rem;
     }
+}
 
+@media (max-width: 768px) {
     .stats-grid {
         grid-template-columns: 1fr;
     }
