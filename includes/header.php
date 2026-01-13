@@ -12,12 +12,15 @@
     <title><?php echo isset($page_title) ? $page_title . ' - CareerVault' : 'CareerVault - Student Career Diary'; ?></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
 </head>
 <body>
     <header class="header">
         <div class="header-container">
             <div class="logo">
-                <h1>📚 CareerVault</h1>
+                <a href="<?php echo is_logged_in() ? '../dashboard/index.php' : '../index.php'; ?>" style="text-decoration:none;color:inherit;">
+                    <h1>📚 CareerVault</h1>
+                </a>
             </div>
             <?php if (is_logged_in()): ?>
             <nav class="nav-menu">

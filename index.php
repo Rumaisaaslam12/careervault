@@ -20,6 +20,7 @@ if (is_logged_in()) {
     <title>Welcome to CareerVault</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
     <style>
         .hero-section {
             text-align: center;
