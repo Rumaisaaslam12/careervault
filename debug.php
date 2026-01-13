@@ -20,20 +20,23 @@ print_r([
 ]);
 echo "</pre>";
 
-echo "<h2>Database Connection Test</h2>";
-require_once 'config/db.php';
-
-if (isset($conn) && $conn instanceof mysqli) {
-    echo "<p style='color:green'><strong>Success!</strong> Connected to database.</p>";
-    echo "Host info: " . $conn->host_info;
-} else {
-    echo "<p style='color:red'><strong>Failed!</strong> Connection variable not set.</p>";
-}
-
 echo "<h2>MySQL Extension Check</h2>";
 if (extension_loaded('mysqli')) {
     echo "<p style='color:green'>mysqli extension is loaded.</p>";
 } else {
     echo "<p style='color:red'>mysqli extension is NOT loaded.</p>";
+}
+
+echo "<h2>Database Connection Test</h2>";
+if (extension_loaded('mysqli')) {
+    require_once 'config/db.php';
+    if (isset($conn) && $conn instanceof mysqli) {
+        echo "<p style='color:green'><strong>Success!</strong> Connected to database.</p>";
+        echo "Host info: " . $conn->host_info;
+    } else {
+        echo "<p style='color:red'><strong>Failed!</strong> Connection variable not set.</p>";
+    }
+} else {
+    echo "<p style='color:red'>Skipping DB connect test because mysqli is missing.</p>";
 }
 ?>
