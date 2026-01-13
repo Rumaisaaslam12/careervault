@@ -381,13 +381,13 @@ select.form-control {
 /* Responsive Design */
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: row;
-        gap: 0;
+        flex-direction: column;
+        gap: 0.5rem;
     }
 
     .nav-toggle {
         display: block;
-        align-self: center;
+        align-self: flex-end;
     }
 
     .nav-menu {
@@ -397,6 +397,7 @@ select.form-control {
 
     .nav-menu.open {
         display: block;
+        margin-top: 20px;
     }
 
     .nav-menu ul {

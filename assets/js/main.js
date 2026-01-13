@@ -131,6 +131,16 @@ document.addEventListener('DOMContentLoaded', function() {
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', () => {
             navMenu.classList.toggle('open');
+            const icon = navToggle.querySelector('i');
+            if (icon) {
+                if (navMenu.classList.contains('open')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }
         });
     }
 });
